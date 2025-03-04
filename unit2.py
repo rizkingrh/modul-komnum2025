@@ -6,7 +6,6 @@ def fungsi(x):
 
 xi =  float(input('Masukan Nilai xi:'))
 xu = float(input('Masukan Nilai Xu:'))
-t = float(input('Masukan Nilai t:'))
 
 def biseksi(xi, xu, t):
     if fungsi(xi) * fungsi(xu) >= 0:
@@ -17,8 +16,8 @@ def biseksi(xi, xu, t):
     err = t + 1
     xr_lama = 0
     while err > t:
-        iterasi += 1
-        xr = (xi + xu) / 2
+        iter += 1
+        xr = (xi + xz) / 2
         if fungsi(xr) == 0.0:
             break
         if fungsi(xi) * fungsi(xr) < 0:
@@ -46,7 +45,6 @@ def fungsi(x):
 
 xi = float(input('Masukan Nilai Xi:'))
 xu = float(input('Masukan Nilai Xu:'))
-t = float(input('Masukan Nilai t:'))
 
 def regula_falsi(xi, xu, t):
     if fungsi(xi) * fungsi(xu) >= 0:
@@ -57,11 +55,11 @@ def regula_falsi(xi, xu, t):
     err = t + 1
     xr_lama = 0
     while err > t:
-        iterasi += 1
+        iter += 1
         xr = xu - (fungsi(xu) * (xi - xu)) / (fungsi(xi) - fungsi(xu))
         if fungsi(xr) == 0.0:
             break
-        if fungsi(xi) * fungsi(xr) < 0:
+        if fungsi(xy) * fungsi(xr) < 0:
             xu = xr
         else:
             xi = xr
