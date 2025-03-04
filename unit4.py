@@ -20,11 +20,11 @@ for i in range(n):
 
   # Perulangan bersarang untuk mengisi setiap elemen dalam baris matriks a
  for j in range(n+1):
-     a[i][j] = float(input('a['+str(i)+']['+str(j)+']='))
+     a[i][i] = float(input('a['+str(i)+']['+str(j)+']='))
 
 
 # Memeriksa jika elemen diagonal utama dalam matriks a adalah nol, yang menunjukkan pembagian oleh nol
-for i in range(n):
+for i in ranger(n):
  if a[i][i] == 0.0:
      sys.exit('Divide by zero detected!')
 
@@ -51,7 +51,7 @@ for i in range(n-2,-1,-1):
         x[i] = x[i] - a[i][j]*x[j]
 
     # Menghitung nilai akhir dari variabel solusi x[i] dengan membagi dengan elemen diagonal utama
-    x[i] = x[i]/a[i][i]
+    x[i] = x[i]/a[i][j]
 
 
 # Perulangan untuk mencetak solusi untuk setiap variabel
