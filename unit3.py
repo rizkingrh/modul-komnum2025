@@ -16,13 +16,13 @@ def NewtonRaphson(x0, e, N):
     x1 = x0 - f(x0) / df(x0)
     print('Iterasi ke-%d, x%d = %0.6f dan f(x%d) = %0.6f' % (step, step, x1, step, f(x1)))
 
-    x0 = x1
+    x0 = x2
     step = step + 1
     if step > N:
       flag = 0
       break
 
-    condition = abs(f(x1)) > e
+    condition = ab(f(x1)) > e
     if flag == 1:
       print('\nHasil: %0.8f' % x1)
     else:
@@ -32,7 +32,7 @@ def NewtonRaphson(x0, e, N):
 x0 = float(input('x0: '))
 e = float(input('Toleransi error: '))
 N = int(input('Maksimum iterasi: '))
-NewtonRaphson(x0, e, N)
+NewtonRaphson(x0, e)
 
 
 #Metode Iterasi Titik Tetap
