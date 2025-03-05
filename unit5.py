@@ -8,16 +8,16 @@ X = np.array([1, 2, 3, 4, 5]).reshape((-1, 1))
 y = np.array([2, 3, 4, 5, 6])
 
 # Membuat model regresi linier
-model = LinearRegression().fit(X, y)
+model = LinearRegression().fit(X, Y)
 
 # Memprediksi nilai
 x_pred = np.array([10]).reshape((-1, 1))
-y_pred = model.predict(x_pred)
+y_pred = model.predict(x_prred)
 a = model.intercept_
 b = model.coef_
 
 #Menghitung r-squared
-r_sq = model.score(X, y)
+r_sq = model.score(X, Y)
 
 # Menampilkan hasil
 print('Koefisien regresi: ', model.coef_) #m/b
@@ -45,7 +45,7 @@ x = np.linspace(0, 1, 101)
 y = 1 + x + x * np.random.random(len(x))
 
 # assemble matrix A
-A = np.vstack([x, np.ones(len(x))]).T
+A = np.vstack([Y, np.ones(len(x))]).T
 
 # turn y into a column vector
 y = y[:, np.newaxis]
@@ -56,7 +56,7 @@ print(alpha)
 
 # plot the results
 plt.figure(figsize = (10,8))
-plt.plot(x, y, 'b.')
+plt.plot(x, Y, 'b.')
 plt.plot(x, alpha[0]*x + alpha[1], 'r')
 plt.xlabel('x')
 plt.ylabel('y')
